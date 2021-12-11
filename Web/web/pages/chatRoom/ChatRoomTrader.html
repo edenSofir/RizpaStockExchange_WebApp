@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Chat Room</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="../../common/contextPathHelper.js"></script>
+    <script type="text/javascript" src="ChatRoom.js"></script>
+</head>
+
+<body id="page-top">
+<a class="border rounded d-inline scroll-to-top" href="../secondPage/usersAndStocksTrader.html"
+   style="display: none;right: auto;width: -webkit-fill-available; height: auto;"><i class="fas fa-angle-up" style="
+    width: inherit;
+    height: auto;
+"></i>GO BACK TO HOME PAGE</a>
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top"
+                 style="height: 80px;margin: 0px 0px 0px;padding: 0px 0px;">
+                <div class="container-fluid">
+                    <div class="col" style="text-align: left;">
+                        <div class="btn-group" role="group"></div>
+                     <span class="text-dark mb-4"
+                              style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px; padding: 60px;">Hello<span
+                                class="userNameSpan" id="userNameSpan"
+                                style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px;"></span> - <span
+                                style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px;"
+                                class="RoleSpan" id="RoleSpan"></span></span>
+                    </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/NY_Stock_Exchange_logo.svg"
+                         class="icon ion-ios-person"
+                         style="margin: 0px 0px 0px;background: rgba(78,115,223,0);color: var(--bs-blue);height: 50px;width: 50px;text-align: center;font-size: 30px;">
+                </div>
+            </nav>
+            <span style="padding: 0px 780px;font-family: ABeeZee, sans-serif;font-size: 26px;">Online Chat</span>
+            <div class="container" style="padding: 0px 700px 0px 0px ;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="chatarea"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <form id="chatform" method="POST" action="sendChat">
+                            <div class="row">
+                                <div class="col" style="padding: 0px 15px 10px;">
+                                    <input type="text" style="border-top-left-radius: 50px;border-top-right-radius: 50px;border-bottom-right-radius: 50px;border-bottom-left-radius: 50px;" id="userstring" name="userstring">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col" style="padding: 0px 50px ;">
+                                    <input class="btn btn-primary" type="submit" value="Send Message" style="border-top-left-radius: 50px;border-top-right-radius: 50px;border-bottom-right-radius: 50px;border-bottom-left-radius: 50px;">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+</div>
+<div class="card">
+    <div class="card-body"></div>
+    <div class="card-body" style="padding: 0px 40px;"></div>
+</div>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/theme.js"></script>
+</body>
+
+</html>

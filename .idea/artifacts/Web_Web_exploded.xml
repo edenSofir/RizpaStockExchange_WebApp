@@ -1,0 +1,18 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Web:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Web_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="Web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="Dto" />
+          <element id="artifact" artifact-name="Engine" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/gson-2.1 (1).jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

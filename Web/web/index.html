@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Rizpa Stock Exchange</title>
+    <link rel="stylesheet" href="pages/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="pages/assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="pages/assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="pages/assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="pages/assets/css/Social-Icons.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Rizpa Stock Exchange</title>
+    <link rel="stylesheet" href="common/bootstrap.min.css">
+    <script type="javascript" src="common/contextPathHelper.js"></script>
+    <script src="common/jquery-3.6.0.min.js"></script>
+    <script src="pages/loginPage/login.js"></script>
+</head>
+
+<body id="page-top" style="text-align: center;">
+    <div id="wrapper">
+        <div class="d-flex flex-column" id="content-wrapper"></div><a class="border rounded d-inline scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+    </div>
+    <section class="login-dark">
+        <form method="GET" action="login" id="loginForm">
+            <h2 class="visually-hidden">Login Form</h2>
+            <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+            <span style="font-family: ABeeZee, sans-serif;">please insert your user name :</span>
+            <input class="form-control loginUser" name="username"  type="text" style="border-color: rgb(255,255,255);margin: 10px;">
+            <div class="form-check">
+                <input class="form-check-input role" name="Trader&Admin"  type="radio" id="Admin" value="Admin">
+                <label class="form-check-label" for="Admin" style="font-family: ABeeZee, sans-serif;">Admin</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input role" type="radio" id="Trader"name="Trader&Admin" value="Trader" checked="checked">
+                <label class="form-check-label" for="Trader" style="font-family: ABeeZee, sans-serif;">Trader</label>
+            </div>
+            <div class="mb-3"></div>
+            <div class="mb-3"></div>
+            <div class="mb-3">
+                <input value="Login" class="btn btn-primary d-block w-100" type="submit" style="font-family: ABeeZee, sans-serif;border-top-left-radius: 50px;border-top-right-radius: 50px;border-bottom-right-radius: 50px;border-bottom-left-radius: 50px;"></div>
+        </form>
+        <div id="error-placeholder" class="alert-danger" role="alert"></div>
+    </section>
+    <script src="pages/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="pages/assets/js/theme.js"></script>
+</body>
+
+</html>

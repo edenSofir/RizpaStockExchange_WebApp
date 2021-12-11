@@ -1,0 +1,153 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Bank Account</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/Simple-Slider.css">
+    <link rel="stylesheet" href="assets/css/Team-Grid.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="../../common/contextPathHelper.js"></script>
+    <script type="text/javascript" src="BankAccount.js"></script>
+</head><body id="page-top"><a class="border rounded d-inline scroll-to-top" href="../secondPage/usersAndStocksTrader.html" style="display: none;right: auto;width: -webkit-fill-available; height: auto;"><i class="fas fa-angle-up" style="
+    width: inherit;
+    height: auto;
+"></i>GO BACK TO HOME PAGE</a>
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top">
+                <div class="container-fluid">
+                    <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group"></div>
+                    </form>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <h3 class="text-dark mb-4" style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 32px;"><span class="userNameSpan" id="userNameSpan"></span>Bank Account</h3>
+                <div class="row mb-3">
+                    <div class="col-lg-8">
+                        <div class="row mb-3 d-none">
+                            <div class="col">
+                                <div class="card textwhite bg-primary text-white shadow">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <p class="m-0">Peformance</p>
+                                                <p class="m-0"><strong>65.2%</strong></p>
+                                            </div>
+                                            <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                        </div>
+                                        <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card textwhite bg-success text-white shadow">
+                                    <div class="card-body">
+                                        <div class="row mb-2">
+                                            <div class="col">
+                                                <p class="m-0">Peformance</p>
+                                                <p class="m-0"><strong>65.2%</strong></p>
+                                            </div>
+                                            <div class="col-auto"><i class="fas fa-rocket fa-2x"></i></div>
+                                        </div>
+                                        <p class="text-white-50 small m-0"><i class="fas fa-arrow-up"></i>&nbsp;5% since last month</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="card shadow mb-3">
+                                    <div class="card-header py-3">
+                                        <p class="text-primary m-0 fw-bold" style="text-align: center;">History bank account</p>
+                                    </div>
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="table-responsive">
+                                                        <table class="HistoryTable table" id="HistoryTable">
+                                                            <thead>
+                                                            <tr>
+                                                                <th style="text-align: center;">
+                                                                    <div class="w-100"></div>command type
+                                                                </th>
+                                                                <th style="text-align: center;">
+                                                                    <div class="w-100"></div>&nbsp;date
+                                                                </th>
+                                                                <th style="text-align: center;">
+                                                                    <div class="w-100"></div>command amount
+                                                                </th>
+                                                                <th style="text-align: center;">
+                                                                    <div class="w-100"></div>Balance before transaction
+                                                                </th>
+                                                                <th style="text-align: center;">Balance after transaction</th>
+                                                                <th style="text-align: center;">
+                                                                    <div class="w-100"></div>Stock Symbol
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody>
+
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <header></header>
+                        <div class="card"></div>
+                        <div class="card">
+                            <div class="card-body">
+                                <hr>
+                                <h4 class="card-title" style="text-align: center;font-size: 16px;color: var(--bs-blue);font-weight: bold;">load your money</h4>
+                                <h6 class="text-muted card-subtitle mb-2" style="text-align: center;">please insert the amount of money you wish to load</h6>
+                                <form action="LoadMoney" method="post" id="LoadMoney">
+                                    <input type="text" name="amountToLoad" id="LoadTextField">
+                                    <input type="submit" class="btn btn-primary" value="load money">
+                                </form>
+                                <hr>
+                                <div></div>
+                            </div>
+                            <div class="card-body">
+                                <hr>
+                                <div></div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <h4 class="card-title" style="text-align: center;font-size: 16px;color: var(--bs-blue);font-weight: bold;">Current amount of money</h4>
+                                <h6 class="text-muted card-subtitle mb-2" style="text-align: center;">your current amount of money is <span id="currAmountMoney"></span></h6>
+                                <hr>
+                            </div>
+                        </div>
+                        <section class="team-grid">
+                            <div class="container">
+                                <div class="intro"></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
+    <script src="assets/js/theme.js"></script>
+
+
+</div></body></html>

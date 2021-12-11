@@ -1,0 +1,86 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Rizpa Stocks Exchange System</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/Social-Icons.css">
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="../../common/contextPathHelper.js"></script>
+    <script type="text/javascript" src="usersAndStocks.js"></script>
+</head>
+
+<body id="page-top" style="text-align: center;">
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" style="height: 80px;margin: 0px 0px 0px;padding: 0px 0px;">
+                <div class="container-fluid">
+                    <div class="col" style="text-align: left;">
+                        <div class="btn-group" role="group"></div>
+                        <a href="Logout" class="btn btn-primary" style="margin: 0px 10px;border-top-left-radius: 50px;border-top-right-radius: 50px;border-bottom-right-radius: 50px;border-bottom-left-radius: 50px ;">logout</a>
+                        <a id="Chat" href="../chatRoom/ChatRoomAdmin.html" class="btn btn-primary" style="margin: 0px 10px;border-top-left-radius: 50px;border-top-right-radius: 50px;border-bottom-right-radius: 50px;border-bottom-left-radius: 50px ;">chat</a>
+                        <span class="text-dark mb-4"
+                              style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px; padding: 60px;">Hello<span
+                                class="userNameSpan" id="userNameSpan"
+                                style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px;"></span> - <span
+                                style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px;" class="RoleSpan" id="RoleSpan"></span></span>
+                    </div>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/NY_Stock_Exchange_logo.svg" class="icon ion-ios-person" style="margin: 0px 0px 0px;background: rgba(78,115,223,0);color: var(--bs-blue);height: 50px;width: 50px;text-align: center;font-size: 30px;">
+                </div>
+            </nav>
+            <div class="container" style="padding: 0px 220px 20px;">
+                <div></div>
+                <div class="col-md-12"><span style="width: 10000px;"></span></div>
+            </div>
+        </div>
+        <footer class="bg-white sticky-footer">
+            <div class="container my-auto">
+                <div class="text-center my-auto copyright"></div>
+            </div>
+            <div class="container" style="padding: 0px 0px 0px 100px;">
+                <div class="row">
+                    <div class="col-md-6" style="width: 830px;padding: 0px 60px 0px 0px ;">
+                        <div class="table-responsive">
+                            <table class="table StockTable">
+                                <thead>
+                                <tr>
+                                    <th class="companyName"><br><strong>Company Name</strong><br></th>
+                                    <th class="symbolStock"><br><strong>Symbol Stock</strong><br></th>
+                                    <th class="currentRate"><br><strong>Current Rate</strong><br></th>
+                                    <th class="TradingCycle"><br><strong>Transaction Cycle</strong><br></th>
+                                    <th class="StockData"><strong>Stock Data</strong><br></th>
+                                </tr>
+                                </thead>
+                                <tbody class="StockBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="width: 280px;padding: 0px 60px;">
+                        <div class="table-responsive">
+                            <table class="table usersList">
+                                <thead>
+                                <tr>
+                                    <th>&nbsp;&nbsp;<br><strong>Users Online :&nbsp;</strong><br></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a class="border rounded d-inline scroll-to-top" href="#page-top" style="display: none;"><i class="fas fa-angle-up"></i></a>
+</div>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/theme.js"></script>
+
+
+</body></html>

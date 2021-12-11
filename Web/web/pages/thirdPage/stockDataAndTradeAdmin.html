@@ -1,0 +1,124 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="../../common/contextPathHelper.js"></script>
+    <script src="stockDataAndTrade.js"></script>
+
+    <style type="text/css">/* Chart.js */
+    @keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+
+<body id="page-top">
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" style="background: var(--bs-purple);">
+                <div class="container-fluid">
+                    <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group ">
+                            <!--Company Name Place Holder-->
+                            <h1 style="color: rgb(128,139,227);font-family: ABeeZee, sans-serif;" id="stockHeadingName"></h1>
+                        </div>
+                    </form>
+                    <span class="text-dark mb-4" style="text-align: center;font-family: ABeeZee, sans-serif; left: auto ;font-weight: bold;font-size: 22px; padding: 60px;">Hello<span class="userNameSpan" id="userNameSpan" style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px;"></span> - <span style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px;" class="RoleSpan" id="RoleSpan"></span></span>
+                    <a href="../secondPage/usersAndStocksAdmin.html"><i class="fas fa-home" style="width: 41px;height: 27px;color: rgb(112,129,251);font-size: 27px;"></i></a>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <div class="d-sm-flex justify-content-between align-items-center mb-4"></div>
+                <h1 style="color: rgb(128,139,227);font-family: ABeeZee, sans-serif;"><strong><span style="text-decoration: underline;">Data</span></strong>&nbsp;</h1>
+                <div class="row">
+                    <div class="col" style="height: 532.333px;font-family: ABeeZee, sans-serif;">
+                        <div class="table-responsive">
+                            <table class="table dataTab">
+                                <thead>
+                                <tr>
+                                    <th style="font-family: ABeeZee, sans-serif;">Symbol</th>
+                                    <th style="font-family: ABeeZee, sans-serif;">Company name</th>
+                                    <th style="font-family: ABeeZee, sans-serif;">Rate</th>
+                                    <th style="font-family: ABeeZee, sans-serif;">Trade Cycle</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="height: 26px;color: rgb(128,139,227);"></div>
+                        <h1 style="color: rgb(128,139,227);font-family: ABeeZee, sans-serif;border-color: rgb(128,139,227);"><strong><span style="text-decoration: underline;">Transactions</span></strong></h1>
+                        <div class="table-responsive">
+                            <table class="table transactionsTab">
+                                <thead>
+                                <tr>
+                                    <th style="font-family: ABeeZee, sans-serif;">Date&nbsp;</th>
+                                    <th style="font-family: ABeeZee, sans-serif;">Amount</th>
+                                    <th>Rate</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h1 style="font-size: 36.88000000000001px;font-family: ABeeZee, sans-serif;padding-top: 17px;color: rgb(128,139,227);"><strong><span style="text-decoration: underline;">Sell Order List</span></strong></h1>
+                        <div class="table-responsive">
+                            <table class="sellTable table">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Price</th>
+                                    <th>Cycle</th>
+                                    <th>Initiator</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <h1 style="font-size: 36.88000000000001px;font-family: ABeeZee, sans-serif;padding-top: 17px;color: rgb(128,139,227);"><strong><span style="text-decoration: underline;">Buy Order List</span></strong></h1>
+                        <div class="table-responsive">
+                            <table class="buyTable table buyTab">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Price</th>
+                                    <th>Cycle</th>
+                                    <th>Initiator</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row" style="font-family: ABeeZee, sans-serif;">
+
+                </div>
+            </div>
+        </div>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top" style="display: none;"><i class="fas fa-angle-up"></i></a><a class="border rounded d-inline scroll-to-top" href="#page-top"></a>
+</div>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/chart.min.js"></script>
+<script src="assets/js/bs-init.js"></script>
+<script src="assets/js/theme.js"></script>
+
+
+</body></html>

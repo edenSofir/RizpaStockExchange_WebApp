@@ -1,0 +1,143 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Dashboard - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="../../common/contextPathHelper.js"></script>
+    <script src="stockDataAndTrade.js"></script>
+    <style type="text/css">/* Chart.js */
+    @keyframes chartjs-render-animation{from{opacity:.99}to{opacity:1}}.chartjs-render-monitor{animation:chartjs-render-animation 1ms}.chartjs-size-monitor,.chartjs-size-monitor-expand,.chartjs-size-monitor-shrink{position:absolute;direction:ltr;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1}.chartjs-size-monitor-expand>div{position:absolute;width:1000000px;height:1000000px;left:0;top:0}.chartjs-size-monitor-shrink>div{position:absolute;width:200%;height:200%;left:0;top:0}</style></head>
+
+<body id="page-top">
+<div id="wrapper">
+    <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav class="navbar navbar-light navbar-expand bg-white shadow mb-4 topbar static-top" style="background: var(--bs-purple);">
+                <div class="container-fluid">
+                    <form class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group stockHeadingName">
+                            <!-- <label>Stock Name</label>-->
+                            <h1 id="stockHeadingName"></h1>
+                        </div>
+                    </form>
+                    <span class="text-dark mb-4" style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px; padding: 60px;">Hello<span class="userNameSpan" id="userNameSpan" style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px;"></span> - <span style="text-align: center;font-family: ABeeZee, sans-serif;font-weight: bold;font-size: 22px;" class="RoleSpan" id="RoleSpan"></span></span>
+                    <a href="../secondPage/usersAndStocksTrader.html"><i class="fas fa-home" style="width: 41px;height: 27px;color: rgb(112,129,251);font-size: 27px;"></i></a>
+                </div>
+            </nav>
+            <div class="container-fluid">
+                <label style="font-size: 16.880000000000006px;font-family: ABeeZee, sans-serif;padding-top: 17px;">Your holdings :</label><label id="userHoldings"></label>
+                <div class="d-sm-flex justify-content-between align-items-center mb-4"></div>
+                <h1 style="color: rgb(128,139,227);font-family: ABeeZee, sans-serif;"><strong><span style="text-decoration: underline;">Data</span></strong>&nbsp;</h1>
+                <div class="row">
+                    <div class="col" style="height: 324.333px;">
+                        <div class="table-responsive">
+                            <table class="table dataTab">
+                                <thead>
+                                <tr>
+                                    <th style="font-family: ABeeZee, sans-serif;">Symbol</th>
+                                    <th style="font-family: ABeeZee, sans-serif;">Company name</th>
+                                    <th style="font-family: ABeeZee, sans-serif;">Rate</th>
+                                    <th style="font-family: ABeeZee, sans-serif;">Trade Cycle</th>
+                                    <th></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <div style="height: 26px;color: rgb(128,139,227);"></div>
+                        <h1 style="color: rgb(128,139,227);font-family: ABeeZee, sans-serif;border-color: rgb(128,139,227);"><strong><span style="text-decoration: underline;">Transactions</span></strong></h1>
+                        <div class="table-responsive">
+                            <table class="table transactionsTab">
+                                <thead>
+                                <tr>
+                                    <th style="font-family: ABeeZee, sans-serif;">Date&nbsp;</th>
+                                    <th style="font-family: ABeeZee, sans-serif;">Amount</th>
+                                    <th>Rate</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        <!--<h1 style="font-size: 16.880000000000006px;font-family: ABeeZee, sans-serif;padding-top: 17px;"><span style="text-decoration: underline;">Your holdings :</span></h1><h1 id="userHoldings"></h1>-->
+                    </div>
+                </div>
+                <hr>
+                <div class="row" style="font-family: ABeeZee, sans-serif;">
+
+                    <hr>
+                    <form action="CreateNewCommand" method="POST" id="CreateNewCommand">
+                        <div class="col" style="border-color: rgb(128,139,227);">
+                            <footer class="bg-white sticky-footer" style="border-color: var(--bs-indigo);">
+                                <h1 style="margin: 10px;height: 51px;font-family: ABeeZee, sans-serif;border-color: rgb(128,139,227);color: rgb(128,139,227);"><span style="text-decoration: underline;">Create New Command:</span></h1>
+                                <div class="container">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div><label class="form-label" style="font-family: ABeeZee, sans-serif;" name="tradingTypeChoose"><strong>Trading type :&nbsp;&nbsp;</strong></label>
+                                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-1" name="tradingType" value="BUY"><label class="form-check-label" for="formCheck-1" style="font-family: ABeeZee, sans-serif;">Buy</label></div>
+                                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-6" name="tradingType" value="SELL"><label class="form-check-label" for="formCheck-6" style="font-family: ABeeZee, sans-serif;">Sell</label></div>
+                                                </div>
+                                            </div>
+                                            <div class="col" style="font-family: ABeeZee, sans-serif;">
+                                                <div class="row">
+                                                    <div><label class="form-label" name="commandTypeChoose"><strong>Command Type:&nbsp;&nbsp;</strong></label></div>
+                                                    <div class="col">
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-2" name="commandType" value="IOC"><label class="form-check-label" for="formCheck-2">IOC</label></div>
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-3" name="commandType" value="FOK"><label class="form-check-label" for="formCheck-2">FOK</label></div>
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-4" name="commandType" value="LMT"><label class="form-check-label" for="formCheck-2">LMT</label></div>
+                                                        <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-5" name="commandType" value="MKT"><label class="form-check-label" for="formCheck-5">MKT</label></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row" style="height: 91.6667px;padding: -18px;">
+                                            <div class="col" style="height: 83.66670000000002px;">
+                                                <div style="font-family: ABeeZee, sans-serif;">
+                                                    <hr><label class="form-label"><strong>Stocks quantity :</strong></label>
+                                                    <label class="form-label"></label>
+                                                    <input type="text" id="newStockQuantity" name="stockQuantityCommand">
+                                                </div>
+                                            </div>
+
+                                            <div class="col" style="font-family: ABeeZee, sans-serif;height: 80.6667px;padding: -1px;">
+                                                <div></div>
+                                                <hr><label class="form-label"><strong>Price :</strong></label>
+                                                <input type="text" id="StockPrice" name="newStockPrice">
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input class="btn btn-primary" type="submit" value="Confirm" style="margin: 10px ;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col"><span style="width: 304.667px;height: 89px;margin: 6px;" id="messageToUser"></span></div>
+                                </div>
+                            </footer>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div><a class="border rounded d-inline scroll-to-top" href="#page-top" style="display: none;"><i class="fas fa-angle-up"></i></a><a class="border rounded d-inline scroll-to-top" href="#page-top"></a>
+</div>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/chart.min.js"></script>
+<script src="assets/js/bs-init.js"></script>
+<script src="assets/js/theme.js"></script>
+
+
+
+</body></html>
